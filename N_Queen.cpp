@@ -11,7 +11,7 @@ bool isSafe(int **arr, int x, int y, int n)
     int col = y;
     while (row >= 0 && col >= 0)
     {
-        if (arr[row][col == 1])
+        if (arr[row][col] == 1)
             return false;
 
         row--;
@@ -22,7 +22,7 @@ bool isSafe(int **arr, int x, int y, int n)
     col = y;
     while (row >= 0 && col < n)
     {
-        if (arr[row][col == 1])
+        if (arr[row][col] == 1)
             return false;
 
         row--;
@@ -42,7 +42,7 @@ bool nQueen(int **arr, int x, int n)
             arr[x][col] = 1;
             if (nQueen(arr, x + 1, n))
                 return true;
-                
+
             arr[x][col] = 0;
         }
     }
